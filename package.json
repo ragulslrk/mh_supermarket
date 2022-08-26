@@ -1,0 +1,26 @@
+{
+  "name": "mh_supermarket",
+  "version": "1.0.0",
+  "description": "this is  mh supermarket",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ragulslrk/mh_supermarket.git"
+  },
+  "author": "zeus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ragulslrk/mh_supermarket/issues"
+  },
+  "homepage": "https://github.com/ragulslrk/mh_supermarket#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}
