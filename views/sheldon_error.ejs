@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheldon</title>
+
+    
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+</head>
+<body>
+    
+<div class="container-xxl">
+    <div class="authentication-wrapper authentication-basic container-p-y">
+      <div class="authentication-inner">
+        <!-- Register -->
+        <div class="card">
+          <div class="card-body">
+            <!-- Logo -->
+            <div class="app-brand justify-content-center">
+              <a href="" class="app-brand-link gap-2">
+                <span class="app-brand-logo demo">
+                </span>
+                <div style="display:flex;justify-content:center;">
+                    <img src="assets/img/logo.png" style="width:50px;padding-right:10px;" alt="">
+                    <img src="assets/img/shel logo.png" style="width:50px;padding-left:10px;" alt="">
+                </div>
+              </a>
+            </div>
+           
+              <div class="mb-3">
+                
+                  <div class="alert alert-danger" role="alert">
+                    Incorrect username or Password
+                    </div>
+
+                <label for="email" class="form-label">Username</label>
+                <input 
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="Enter your username"
+                  autofocus
+                />
+              </div>
+              <div class="mb-3 form-password-toggle">
+                <div class="d-flex justify-content-between">
+                  <label class="form-label" for="password">Password</label>
+                </div>
+                <div class="input-group input-group-merge">
+                  <input
+                  type="password"placeholder="Enter your password" id="password" class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="checkbox" onclick="myFunction()"> Show Password
+              </div>
+              <div class="mb-3">
+                
+                <button class="btn btn-primary d-grid w-100" type="submit" style="background-color: #50d9bc;border-color:  #50d9bc;" onclick="login()">
+                  Sign in
+                </button>
+              </div>
+          </div>
+        </div>
+        <!-- /Register -->
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+  </script>
+  <script>
+const login=()=>{
+ var username=document.getElementById('username').value
+ var  password=document.getElementById('password').value
+ window.location.replace(`/sheldon_logins/${username}/${password}`);
+
+}
+  </script>
+</body>
+</html>

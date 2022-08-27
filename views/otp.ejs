@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheldon</title>
+
+    
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+</head>
+<body>
+    
+<div class="container-xxl">
+    <div class="authentication-wrapper authentication-basic container-p-y">
+      <div class="authentication-inner">
+        <!-- Register -->
+        <div class="card">
+          <div class="card-body">
+            <!-- Logo -->
+            <div class="app-brand justify-content-center">
+              <a href="" class="app-brand-link gap-2">
+                <span class="app-brand-logo demo">
+                </span>
+                <div style="display:flex;justify-content:center;">
+                    <img src="assets/img/logo.png" style="width:50px;padding-right:10px;" alt="">
+                    <img src="assets/img/shel logo.png" style="width:50px;padding-left:10px;" alt="">
+                </div>
+              </a>
+            </div>
+           
+              <div class="mb-3">
+                <div id="msg"></div>
+                <label for="email" class="form-label">Please Enter Otp(check the mail)</label>
+                <input 
+                  type="text"
+                  class="form-control"
+                  id="otp"
+                  name="username"
+                  placeholder="Enter your otp"
+                  autofocus
+                />
+              </div>
+           
+              <div class="mb-3">
+                
+                <button class="btn btn-primary d-grid w-100" type="submit" style="background-color: #50d9bc;border-color:  #50d9bc;" onclick="buy()">
+                verify otp
+                </button>
+              </div>
+          </div>
+        </div>
+        <!-- /Register -->
+      </div>
+    </div>
+  </div>
+
+
+ 
+  <script>
+const buy=()=>{
+ var otp=document.getElementById('otp').value
+ var  token=localStorage.getItem('acess_token')
+ var product_name=localStorage.getItem('product_name')
+ var product_price=localStorage.getItem('product_price')
+console.log(otp)
+fetch(`http://localhost:3232/verify_buy/0fe1fb13-e9e2-4d2d-b9c2-6b636900616d/${token}/${product_price}/${product_name}/${otp}`)
+    .then((res)=>{
+        
+        return res.json()
+    })
+    .then(data=>{
+        console.log(data.msg)
+        var msg=document.getElementById('msg')
+        msg.innerHTML=""
+        if(data.msg=='incorrect')
+        {
+            msg.innerHTML=` <div class="alert alert-danger" role="alert">
+                    Incorrect otp
+                    </div>`
+        }
+
+        else{
+            msg.innerHTML=` <div class="alert alert-success" role="alert">
+                    Product  Purchased successfully
+                    </div>`
+        }
+        
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+
+}
+  </script>
+</body>
+</html>

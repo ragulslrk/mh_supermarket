@@ -36,18 +36,14 @@
                 </div>
               </a>
             </div>
-            <form
-              id="formAuthentication"
-              class="mb-3"
-              action=""
-              method="POST"
-            >
+           
               <div class="mb-3">
+                
                 <label for="email" class="form-label">Username</label>
                 <input 
                   type="text"
                   class="form-control"
-                  id="email"
+                  id="username"
                   name="username"
                   placeholder="Enter your username"
                   autofocus
@@ -59,7 +55,7 @@
                 </div>
                 <div class="input-group input-group-merge">
                   <input
-                  type="password"placeholder="Enter your password" id="myInput" class="form-control"
+                  type="password"placeholder="Enter your password" id="password" class="form-control"
                   />
                 </div>
               </div>
@@ -67,11 +63,11 @@
                 <input type="checkbox" onclick="myFunction()"> Show Password
               </div>
               <div class="mb-3">
-                <button class="btn btn-primary d-grid w-100" type="submit" style="background-color: #50d9bc;border-color:  #50d9bc;">
+                
+                <button class="btn btn-primary d-grid w-100" type="submit" style="background-color: #50d9bc;border-color:  #50d9bc;" onclick="login()">
                   Sign in
                 </button>
               </div>
-            </form>
           </div>
         </div>
         <!-- /Register -->
@@ -82,12 +78,20 @@
 
   <script>
     function myFunction() {
-  var x = document.getElementById("myInput");
+  var x = document.getElementById("password");
   if (x.type === "password") {
     x.type = "text";
   } else {
     x.type = "password";
   }
+}
+  </script>
+  <script>
+const login=()=>{
+ var username=document.getElementById('username').value
+ var  password=document.getElementById('password').value
+ window.location.replace(`/sheldon_logins/${username}/${password}`);
+
 }
   </script>
 </body>

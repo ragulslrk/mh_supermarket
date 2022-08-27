@@ -1,11 +1,13 @@
 const  route =require('express').Router()
 const axios = require("axios")
 
-route.get('/sheldon_login',(req,res)=>{
-    res.send('this is login page')
+route.get('/sheldon_login_error',(req,res)=>{
+    res.render('sheldon_error')
 })
-x
-route.get('/sheldon_login/:username/:password',(req,res)=>{
+route.get('/sheldon_login',(req,res)=>{
+    res.render('sheldon')
+})
+route.get('/sheldon_logins/:username/:password',(req,res)=>{
     
     
 	axios({
@@ -22,14 +24,21 @@ route.get('/sheldon_login/:username/:password',(req,res)=>{
         .catch(err=>{
             console.log('in err');
             
-            res.send('Incorrect username or Password')
+             res.redirect("/sheldon_login_error")
+            
         })
         
 	
 })
 
 route.get("/dashboard",(req,res)=>{
-   res.render('das')
+   res.render('index')
 
+})
+
+
+
+route.get('/login',(req,res)=>{
+    res.render('login')
 })
 module.exports=route

@@ -2,7 +2,11 @@
 <html lang="zxx">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MH basket</title>
 
     <!-- Google Font -->
@@ -25,6 +29,7 @@
         <div class="loader"></div>
     </div>
 
+   
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
@@ -66,86 +71,52 @@
         </div>
     </header>
     <!-- Header Section End -->
-<!-- Content -->
 
-<div class="container-xxl">
-    <div class="authentication-wrapper authentication-basic container-p-y">
-      <div class="authentication-inner">
-        <!-- Register -->
-        <div class="card">
-          <div class="card-body">
-            <!-- Logo -->
-            <div class="app-brand justify-content-center">
-              <a href="" class="app-brand-link gap-2">
-                <span class="app-brand-logo demo">
-                </span>
-                <h4 style="text-align:center;"
-                  >MH Basket</h4>
-              </a>
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="assets/img/breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Product Package</h2>
+                        <div class="breadcrumb__option">
+                            <a >Home</a>
+                            <a >Products</a>
+                            <span>product Package</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <form
-              id="formAuthentication"
-              class="mb-3"
-              action=""
-              method="POST"
-            >
-              <div class="mb-3">
-                <label for="email" class="form-label">Username</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="email"
-                  name="username"
-                  placeholder="Enter your username"
-                  autofocus
-                />
-              </div>
-              <div class="mb-3 form-password-toggle">
-                <div class="d-flex justify-content-between">
-                  <label class="form-label" for="password">Password</label>
-                  <a href="auth-forgot-password-basic.html">
-                    <small>Forgot Password?</small>
-                  </a>
-                </div>
-                <div class="input-group input-group-merge">
-                  <input
-                    type="password"
-                    id="password"
-                    class="form-control"
-                    name="password"
-                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                    aria-describedby="password"
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="remember-me"
-                  />
-                  <label class="form-check-label" for="remember-me">
-                    Remember Me
-                  </label>
-                </div>
-              </div>
-              <div class="mb-3">
-                <button class="btn btn-primary d-grid w-100" type="submit">
-                  Sign in
-                </button>
-              </div>
-            </form>
-            <button class="btn" style="border-color:rgb(79, 79, 79);margin-left: 140px;" >
-                <img src="assets/img/shel logo.png" style="width:40px;" alt="">
-            </button>
-          </div>
         </div>
-        <!-- /Register -->
-      </div>
-    </div>
-  </div>
+    </section>
+    <!-- Breadcrumb Section End -->
 
+    <!-- Product Details Section Begin -->
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large"
+                                src="assets/img/3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                        <h3>Choco Cake</h3>
+                        <div class="product__details__price">$70.00</div>
+                        <p style="color:black;">We have world best Product in our website</p>
+                        <div class="product__details__quantity">
+                        </div>
+                        <a onclick="send_otp('choco cake',70)"  class="primary-btn">BUY</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Details Section End -->
 
     <!-- Js Plugins -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
@@ -153,8 +124,10 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/jquery.slicknav.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/sendotp.js"></script>
 
 
 </body>
